@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f4f7fc"
+    tools:context=".GetInfo">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/action_bar">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/back_button"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="B M I    C a l c u l a t o r"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    // 1st row layout
+    <LinearLayout
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/action_bar"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal">
+
+        // age
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            // age column
+            <LinearLayout
+                android:id="@+id/layout_age"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/info_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="A g e"
+                    android:textColor="#605f5e"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                // age input
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/age_input"
+                    android:text="19"
+                    android:textStyle="bold"
+                    android:textSize="60dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="19.5dp"
+                    android:layout_gravity="center"/>
+
+                // set age
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_gravity="center">
+
+                    // set age button
+                    <RelativeLayout
+                        android:id="@+id/age_minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_bg">
+
+                        // decrease age
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="14dp"
+                            android:src="@drawable/ic_minus"/>
+
+                    </RelativeLayout>
+
+                    // set age button
+                    <RelativeLayout
+                        android:id="@+id/age_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_bg">
+
+                        // increase age
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="3dp"
+                            android:src="@drawable/ic_plus"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        // weight
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+
+            // weight column
+            <LinearLayout
+                android:id="@+id/layout_weight"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/info_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="W e i g h t"
+                    android:textColor="#605f5e"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="( k g )"
+                    android:textColor="#605f5e"
+                    android:textSize="11dp"
+                    android:textStyle="bold" />
+
+                // weight input
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/weight_input"
+                    android:text="50"
+                    android:textStyle="bold"
+                    android:textSize="60dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center"/>
+
+                // set weight
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="center">
+
+                    // set weight button
+                    <RelativeLayout
+                        android:id="@+id/weight_minus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_bg">
+
+                        // decrease weight
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="14dp"
+                            android:src="@drawable/ic_minus" />
+
+                    </RelativeLayout>
+
+                    // set weight button
+                    <RelativeLayout
+                        android:id="@+id/weight_plus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/round_bg">
+
+                        // increase weight
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:padding="3dp"
+                            android:src="@drawable/ic_plus"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    // 2nd row
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout1"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical"
+        android:background="@drawable/info_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/height_txt"
+            android:text="H e i g h t"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="#605f5e"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="( c m )"
+            android:textColor="#605f5e"
+            android:textSize="11dp"
+            android:textStyle="bold"/>
+
+        // height input
+
+        <TextView
+            android:id="@+id/height_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="60dp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.slider.Slider
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/slider_height"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:valueFrom="0"
+            android:valueTo="200"
+            app:thumbColor="@color/white"
+            app:trackColorActive="#4361ee"
+            app:trackColorInactive="#f4f7fc"
+            app:labelBehavior="gone"/>
+
+    </LinearLayout>
+
+    // 3rd row
+    <LinearLayout
+        android:id="@+id/layout3"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/layout2"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/info_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="G e n d e r"
+            android:textColor="#605f5e"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:id="@+id/im"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="i ' m"
+                android:textColor="#605f5e"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/im"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="25dp"
+                android:text="Male"
+                android:textColor="#605f5e"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/gender_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/male"
+                android:layout_marginLeft="45dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="50dp"
+                android:thumb="@drawable/thumb"
+                app:track="@drawable/track" />
+
+            <TextView
+                android:id="@+id/female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/gender_input"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="25dp"
+                android:text="Female"
+                android:textColor="#605f5e"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_bg"
+        android:text="C a l c u l a t e"
+        android:textStyle="bold"
+        android:textColor="#4361ee"
+        android:textAllCaps="false"
+        app:backgroundTint="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"/>
+
+</RelativeLayout>
